@@ -33,14 +33,13 @@ main {
     text-align: center;
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
-
     .header {
         text-align: left;
-        padding: 2rem;
-    }
 
-    #banner-desktop {
-        display: none;
+        #logo {
+            padding: 2rem;
+        }
+        
     }
 
     .card {
@@ -83,6 +82,11 @@ main {
                     font-size: .75rem;
                     letter-spacing: 1px;
                 }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid hsl(0, 36%, 50%);
+                }
             }
 
             #submit {
@@ -96,10 +100,11 @@ main {
                 border-radius: 1.75rem;
                 box-shadow: 0px 5px 10px hsl(0, 36%, 85%);
 
-                &:hover {
-                    cursor: pointer;
-                    background: hsl(0, 100%, 90%);
+                &:focus {
+                    outline: none;
+                    border: 1px solid hsl(0, 36%, 50%);
                 }
+                
             }
         }
     }
@@ -112,14 +117,76 @@ main {
 
 
 @media only screen and (min-width: 1440px) {
-    
-    #banner-mobile {
-        display: none;
+
+    main {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 80%;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        #banner-img-mobile {
+            display: none;
+        }
+
+        .desktop-banner {
+            grid-column: 2;
+            grid-row: span 2;
+            background-image: url("../images/hero-desktop.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+         
+         .header {
+             grid-column: 1;
+             grid-row: 1;
+             display: flex;
+             justify-content: flex-start;
+             align-items: center;
+             padding-left: 6rem;
+             width: 40rem;
+             height: 12rem;
+             margin: 0 auto;
+         }
+     
+         .card {
+             grid-column: 1;
+             grid-row: 2;
+             text-align: left;
+             padding: 3rem 8rem;
+             width: 40rem;
+             height: 50rem;
+             margin: 0 auto;
+
+            h1 {
+                font-size: 4.25rem;
+            }
+
+
+            form {
+
+                #email {
+                    width: 22rem;
+                }
+
+                #submit {
+                    padding: 0 2.25rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        background:hsl(0, 100%, 90%);
+                        box-shadow: 0px 8px 15px hsl(0, 36%, 80%);
+                    }
+                }
+            }
+         }
     }
 
-    #banner-desktop {
-        display: block;
-    }
+
 }
 
 
