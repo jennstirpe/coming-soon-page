@@ -19,18 +19,12 @@
 
   <main>
 
-    <div class="desktop-banner">
-
-    </div>
+    <div class="desktop-banner"></div>
 
     <div class="header">
       <img id="logo" src="images/logo.svg" alt="Base Apparel">
       <img id="banner-img-mobile" src="images/hero-mobile.jpg" alt="banner">
     </div>
-
-    
-
-    
       
     <section class="card">
       <h1><span>We're</span> coming soon</h1>
@@ -38,8 +32,10 @@
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
       <form>
-        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="email" id="email" placeholder="Email Addres" required>
+        <img src="images/icon-error.svg" class="error" id="error-icon"  alt="Error">
         <button id="submit" type="submit"><img src="images/icon-arrow.svg" alt="Submit arrow"></button>
+        <span id="error-message" class="error">Please provide a valid email</span>
       </form>
     </section>
     
@@ -53,5 +49,7 @@
       Coded by <a href="#">J Stirpe</a>.
     </p>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
